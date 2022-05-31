@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 const initialInputValue = { task: "" }
-function Form({ addTask, tasks}) {
+function Form({ setTask, tasks}) {
 
     const [form, setForm] = useState(initialInputValue);
     const onChangeInput = (e) => {
@@ -11,7 +11,7 @@ function Form({ addTask, tasks}) {
         if(form.task === "") {
             return false;
         }
-        addTask([...tasks, form])
+        setTask([...tasks, form])
         setForm(initialInputValue)
     }
 

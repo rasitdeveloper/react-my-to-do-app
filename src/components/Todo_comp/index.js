@@ -16,8 +16,8 @@ function Todo_comp() {
   return (
     <div id='container'>
       <h1>To Do App</h1>
-      <Form addTask = {setTasks} tasks={tasks} />
-      <List tasks = {tasks}/>
+      <Form setTask = {setTasks} tasks = {tasks} />
+      <List setTask = {setTasks} tasks = {tasks}/>
     </div>
   )
 }
