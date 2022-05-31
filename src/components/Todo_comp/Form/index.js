@@ -8,7 +8,7 @@ function Form({ addTask, tasks}) {
         setForm({...form, [e.target.name]: e.target.value });
     }
     const onSubmit = (e) => {
-        if(form.fullname === "") {
+        if(form.task === "") {
             return false;
         }
         addTask([...tasks, form])
@@ -22,8 +22,8 @@ function Form({ addTask, tasks}) {
             name="task" placeholder='What needs to be done ?' onChange={onChangeInput} value={form.task}
             />
         </div>
-        <div>
-            <span>4 items left</span>
+        <div id='optional'>
+            <span>Total {tasks.length}</span>
             <span><button>All</button></span>
             <span><button>Active</button></span>
             <span><button>Completed</button></span>

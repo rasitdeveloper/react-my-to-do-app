@@ -1,4 +1,7 @@
 import React, { useEffect, useState } from 'react'
+
+import "./style.css"
+
 import List from "./List"
 import Form from "./Form"
 
@@ -11,7 +14,8 @@ function Todo_comp() {
   }, [tasks]);
 
   return (
-    <div>
+    <div id='container'>
+      <h1>To Do App</h1>
       <Form addTask = {setTasks} tasks={tasks} />
       <List tasks = {tasks}/>
     </div>
