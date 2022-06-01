@@ -3,6 +3,7 @@ import "../style.css"
 
 function List({ setTask, tasks }) {
 
+
   const deleteTask = (e) => {
     
     const newTasks = tasks.filter((item) => {
@@ -15,14 +16,13 @@ function List({ setTask, tasks }) {
 
   }
 
+
   return (
     <div>
         <ul className='list'>
           {
             tasks.map((task, i) => (
-              <li key={i}>
-                <span>{task.task}</span>
-                <span><button id={i} onClick={deleteTask}>X</button></span>
+              <li key={i}> <span>{task.task}</span> <span><button id={i} onClick={deleteTask}>X</button></span>
               </li>
             ))
           }

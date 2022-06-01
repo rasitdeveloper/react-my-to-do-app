@@ -14,6 +14,7 @@ function Form({ setTask, tasks}) {
         setTask([...tasks, form])
         setForm(initialInputValue)
     }
+    
 
   return (
     <div>
@@ -24,9 +25,6 @@ function Form({ setTask, tasks}) {
         </div>
         <div id='optional'>
             <span>Total {tasks.length}</span>
-            <span><button>All</button></span>
-            <span><button>Active</button></span>
-            <span><button>Completed</button></span>
             <span><button onClick={onSubmit}>Submit</button></span>
         </div>
     </div>
