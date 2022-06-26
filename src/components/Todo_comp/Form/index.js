@@ -14,13 +14,23 @@ function Form({ setTask, tasks}) {
         setTask([...tasks, form])
         setForm(initialInputValue)
     }
+
+    const keyPress = (e) => {
+        if(e.key === "Enter") {
+            if(form.task === "") {
+                return false;
+            }
+            setTask([...tasks, form])
+            setForm(initialInputValue)
+        }
+    }
     
 
   return (
     <div>
         <div>
             <input 
-            name="task" placeholder='What needs to be done ?' onChange={onChangeInput} value={form.task}
+            name="task" placeholder='What needs to be done ?' onChange={onChangeInput} value={form.task} onKeyPress={keyPress}
             />
         </div>
         <div id='optional'>
